@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Rokcet Animation</title>
+</head>
+<body>
+
+    <div class="scene">
+        <div class="rocket">
+            <img src="rocket.png" alt="" srcset="">
+        </div>
+    </div>
+    <script>
+        function stars()
+        {
+            var count = 50;
+            var scene = document.querySelector('.scene');
+            let i = 0;
+            while(i < count)
+            {
+                let star = document.createElement('i');
+                let horizontalLocation = Math.floor(Math.random() * window.innerWidth);
+                let height = Math.random() * 100;
+                let duration = Math.random() * 1;
+
+                star.style.left = horizontalLocation + 'px';
+                star.style.height =  height + 'px';
+                star.style.width =  1 + 'px';
+                star.style.animationDuration = duration + 's';
+                i++;
+                scene.appendChild(star);
+
+            }
+
+        }
+        stars();
+        </script>
+    
+</body>
+</html>
